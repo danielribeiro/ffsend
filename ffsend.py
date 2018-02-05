@@ -168,8 +168,8 @@ def _upload(filename, file, password=None):
         resp.raise_for_status()
 
     print("Your download link is", url)
-    print("Deletion token is", res['delete'])
-    return url, res['delete']
+    deprecated_delete_key = None
+    return url, deprecated_delete_key
 
 def upload(filename, file=None, password=None):
     if file is None:
